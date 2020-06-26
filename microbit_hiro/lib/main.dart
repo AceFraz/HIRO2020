@@ -5,11 +5,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_blue/flutter_blue.dart';
 import 'package:path_provider/path_provider.dart';
 
-
 void main() => runApp(MyApp());
 
 class ProgressHUD extends StatelessWidget {
-
   final bool inAsyncCall;
   final double opacity;
   final Color color;
@@ -87,17 +85,14 @@ class BluetoothOffScreen extends StatelessWidget {
             ),
             Text(
               'Stato Bluetooth : ${state != null ? state.toString().substring(15) : 'non disponibile'}.',
-              style: TextStyle(
-                color: Colors.black,
-                fontSize: 15
-              ),
+              style: TextStyle(color: Colors.black, fontSize: 15),
             ),
           ],
         ),
       ),
     );
   }
-} 
+}
 
 class MyHomePage extends StatefulWidget {
   MyHomePage({Key key, this.title}) : super(key: key);
@@ -157,105 +152,70 @@ class _MyHomePageState extends State<MyHomePage> {
         return "Disconnecting";
         break;
       default:
-        return "sos";
+        return "-1";
     }
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          title: Text(widget.title),
-        ),
-        body: RefreshIndicator(
-          child: SingleChildScrollView(
-            child: Column(
-              children: <Widget>[
-                /*
-                StreamBuilder<List<BluetoothDevice>>(
-                stream: Stream.periodic(Duration(seconds: 2))
-                    .asyncMap((_) => FlutterBlue.instance.connectedDevices),
-                initialData: [],
-                builder: (c, snapshot) => Column(
-                  children: snapshot.data
-                      .map((d) => Container(
-                        padding: EdgeInsets.all(10),
-                        height: 80,
-                        child: Row(
-                          children: <Widget>[
-                            Expanded(
-                              child: Text(d.name == '' ? '(unknown device)' : d.name),
-                            ),
-                            FlatButton(
-                              color: Colors.blue,
-                              child: Text(
-                                'Connect',
-                                style: TextStyle(
-                                  color: Colors.white,
-                                ),
-                              ),
-                              onPressed: () async {
-                                widget.flutterBlue.stopScan();
-                                await d.connect();
-                              },
-                            ),
-                          ],
-                        ),
-                      ))
-                      .toList(),
-                ),
-              ),
-              */
+      appBar: AppBar(
+        title: Text(widget.title),
+      ),
+      body: RefreshIndicator(
+        child: SingleChildScrollView(
+          child: Column(
+            children: <Widget>[
               StreamBuilder<List<ScanResult>>(
                 stream: FlutterBlue.instance.scanResults,
                 initialData: [],
                 builder: (c, snapshot) => Column(
-                  children: snapshot.data
-                      .map(
-                        (d) {
-                          return Container(
-                            padding: EdgeInsets.all(16),
-                        height: 80,
-                        child: Row(
-                          children: <Widget>[
-                            Expanded(
-                              child: Text(d.device.name == '' ? '(unknown device)' : d.device.name),
-                                  
-                            ),
-                            FlatButton(
-                              color: Colors.blue,
-                              child: StreamBuilder<BluetoothDeviceState>(
+                  children: snapshot.data.map((d) {
+                    return Container(
+                      padding: EdgeInsets.all(16),
+                      height: 80,
+                      child: Row(
+                        children: <Widget>[
+                          Expanded(
+                            child: Text(d.device.name == ''
+                                ? '(unknown device)'
+                                : d.device.name),
+                          ),
+                          FlatButton(
+                            color: Colors.blue,
+                            child: StreamBuilder<BluetoothDeviceState>(
                                 stream: d.device.state,
                                 initialData: BluetoothDeviceState.disconnected,
                                 builder: (c, snapshot) {
                                   return Text(
                                     getDeviceState(snapshot.data),
-                                    style: TextStyle(color:Colors.white),
+                                    style: TextStyle(color: Colors.white),
                                   );
-                                }
-                              ),
-                              onPressed: () async {
-                                widget.flutterBlue.stopScan();
-                                await d.device.connect();
-                                Navigator.of(context).pushAndRemoveUntil(MaterialPageRoute(
-                                  builder: (context) => MicroBitDeviceScreen(device: d.device),
-                                ), (route) => false);
-                              },
-                            ),
-                          ],
-                        ),
-                      );
-                        }
-                        ).toList(),
+                                }),
+                            onPressed: () async {
+                              widget.flutterBlue.stopScan();
+                              await d.device.connect();
+                              Navigator.of(context).pushAndRemoveUntil(
+                                  MaterialPageRoute(
+                                    builder: (context) =>
+                                        MicroBitDeviceScreen(device: d.device),
+                                  ),
+                                  (route) => false);
+                            },
+                          ),
+                        ],
+                      ),
+                    );
+                  }).toList(),
                 ),
               ),
-              ],
-            ),
-          ), 
-          onRefresh:  () =>
-            FlutterBlue.instance.startScan(timeout: Duration(seconds: 4)),
+            ],
+          ),
         ),
-      );
+        onRefresh: () =>
+            FlutterBlue.instance.startScan(timeout: Duration(seconds: 4)),
+      ),
+    );
   }
 }
 
@@ -270,7 +230,8 @@ class MicroBitDeviceScreen extends StatefulWidget {
 
 class _MicroBitDeviceScreenState extends State<MicroBitDeviceScreen> {
   List<int> _read = List<int>();
-  List<BluetoothCharacteristic> _characteristics = List<BluetoothCharacteristic>();
+  List<BluetoothCharacteristic> _characteristics =
+      List<BluetoothCharacteristic>();
   bool _load = true;
 
   final writeController = TextEditingController();
@@ -296,8 +257,8 @@ class _MicroBitDeviceScreenState extends State<MicroBitDeviceScreen> {
     final directory = await getApplicationDocumentsDirectory();
     final path = directory.path;
 
-    return File('$path/counter.txt'); 
-  } 
+    return File('$path/counter.txt');
+  }
 
   Future<File> writeCounter(String counter) async {
     final file = await localFile();
@@ -312,9 +273,8 @@ class _MicroBitDeviceScreenState extends State<MicroBitDeviceScreen> {
       final path = directory.path;
       return contents + path;
     } catch (e) {
-      return "sos";
+      return "-1";
     }
-
   }
 
   void loadCharacteristic() async {
@@ -327,10 +287,12 @@ class _MicroBitDeviceScreenState extends State<MicroBitDeviceScreen> {
       for (BluetoothCharacteristic characteristic in service.characteristics) {
         _characteristics.add(characteristic);
         print(characteristic.uuid.toString());
-        if (characteristic.uuid.toString() == '6e400003-b5a3-f393-e0a9-e50e24dcca9e') {
+        if (characteristic.uuid.toString() ==
+            '6e400003-b5a3-f393-e0a9-e50e24dcca9e') {
           characteristicWrite = characteristic;
         }
-        if (characteristic.uuid.toString() == '6e400002-b5a3-f393-e0a9-e50e24dcca9e') {
+        if (characteristic.uuid.toString() ==
+            '6e400002-b5a3-f393-e0a9-e50e24dcca9e') {
           characteristicRead = characteristic;
         }
       }
@@ -349,19 +311,28 @@ class _MicroBitDeviceScreenState extends State<MicroBitDeviceScreen> {
       isFileTransfering = false;
     }
     if (isFileTransfering) {
-      file.writeAsString(msgEv,mode: FileMode.append);
+      file.writeAsString(msgEv, mode: FileMode.append);
       setState(() {
-        prova = 'trasferimento file csv';    
+        prova = 'trasferimento file csv';
       });
-      }
-      
-    
+    }
+
     if (msgEv == "tempo") {
       DateTime now = DateTime.now();
-      String data = now.day.toString() + "," + now.month.toString() + "," + now.year.toString() + "," + now.hour.toString() + "," + now.minute.toString() + "," + now.second.toString();
+      String data = now.day.toString() +
+          "," +
+          now.month.toString() +
+          "," +
+          now.year.toString() +
+          "," +
+          now.hour.toString() +
+          "," +
+          now.minute.toString() +
+          "," +
+          now.second.toString();
       characteristicWrite.write(utf8.encode(data + ":"));
       setState(() {
-        prova = 'configurazione orologio di sistema microbit';    
+        prova = 'configurazione orologio di sistema microbit';
       });
     }
     if (msgEv == "fileTr") {
@@ -374,17 +345,21 @@ class _MicroBitDeviceScreenState extends State<MicroBitDeviceScreen> {
     }
     if (msgEv == 'occupato') {
       setState(() {
-        prova = "il microbit sta raccogliendo i dati, per scambiare il file csv premi il tasto b del microbit e riavvia l'app";
+        prova =
+            "il microbit sta raccogliendo i dati, per scambiare il file csv premi il tasto b del microbit e riavvia l'app";
       });
       await Future.delayed(Duration(seconds: 5));
       widget.device.disconnect();
-      Navigator.of(context).pushAndRemoveUntil(MaterialPageRoute(
-        builder: (context) => MyHomePage(title: "microbit-hiro",)
-      ), (route) => false);
+      Navigator.of(context).pushAndRemoveUntil(
+          MaterialPageRoute(
+              builder: (context) => MyHomePage(
+                    title: "microbit-hiro",
+                  )),
+          (route) => false);
     }
     if (msgEv == "stop") {
       setState(() {
-        prova = "trasferimento terminato";  
+        prova = "trasferimento terminato";
       });
       await Future.delayed(Duration(seconds: 2));
       final directory = await getExternalStorageDirectory();
@@ -392,9 +367,12 @@ class _MicroBitDeviceScreenState extends State<MicroBitDeviceScreen> {
       prova = '$path è il path dove è stato salvato il file csv';
       await Future.delayed(Duration(seconds: 4));
       widget.device.disconnect();
-      Navigator.of(context).pushAndRemoveUntil(MaterialPageRoute(
-                                  builder: (context) => MyHomePage(title: "microbit-hiro",)
-                                ), (route) => false);
+      Navigator.of(context).pushAndRemoveUntil(
+          MaterialPageRoute(
+              builder: (context) => MyHomePage(
+                    title: "microbit-hiro",
+                  )),
+          (route) => false);
     }
   }
 
@@ -402,7 +380,7 @@ class _MicroBitDeviceScreenState extends State<MicroBitDeviceScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title:Text('Collegato a microbit'),
+        title: Text('Collegato a microbit'),
       ),
       body: Center(
         child: Text(prova),
