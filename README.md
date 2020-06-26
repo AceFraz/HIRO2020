@@ -1,6 +1,7 @@
 # Prototipo HIRO
 
 # Software del prototipo <p>
+ 
 # Applicazione <p>
 # Progetto di Machine Learning
 Il nostro progetto di Machine Learning : https://colab.research.google.com/drive/1DWXJCYFagaRwXk9cvUQ4ucVTA527xKEV?usp=sharing <p>
