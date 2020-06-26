@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/peppe.ggu/Desktop/microbitprove/microbit-samples/build/bbc-microbit-classic-gcc/ym/ble/source
+# Install script for directory: C:/Users/Francesco/Desktop/MicroBit/microbit-samples-master/build/bbc-microbit-classic-gcc/ym/ble/source
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

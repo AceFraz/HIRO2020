@@ -2,67 +2,67 @@
 
 cmake_minimum_required(VERSION 2.8.11)
 
-include_directories("C:/Users/peppe.ggu/Desktop/microbitprove/microbit-samples/yotta_modules/ble/source")
+include_directories("C:/Users/Francesco/Desktop/MicroBit/microbit-samples-master/yotta_modules/ble/source")
 
 
-set(YOTTA_AUTO_BLE_CPP_FILES
-    "C:/Users/peppe.ggu/Desktop/microbitprove/microbit-samples/yotta_modules/ble/source/GapScanningParams.cpp"
-    "C:/Users/peppe.ggu/Desktop/microbitprove/microbit-samples/yotta_modules/ble/source/services/URIBeaconConfigService.cpp"
-    "C:/Users/peppe.ggu/Desktop/microbitprove/microbit-samples/yotta_modules/ble/source/BLE.cpp"
-    "C:/Users/peppe.ggu/Desktop/microbitprove/microbit-samples/yotta_modules/ble/source/services/UARTService.cpp"
-    "C:/Users/peppe.ggu/Desktop/microbitprove/microbit-samples/yotta_modules/ble/source/DiscoveredCharacteristic.cpp"
-    "C:/Users/peppe.ggu/Desktop/microbitprove/microbit-samples/yotta_modules/ble/source/services/DFUService.cpp"
-)
-# force dependency on the config header for cpp files, which CMake otherwise wouldn't track:
-set_property(SOURCE ${YOTTA_AUTO_BLE_CPP_FILES} PROPERTY OBJECT_DEPENDS "C:/Users/peppe.ggu/Desktop/microbitprove/microbit-samples/build/bbc-microbit-classic-gcc/yotta_config.h")
 set(YOTTA_AUTO_BLE_HEADER_FILES
-    "C:/Users/peppe.ggu/Desktop/microbitprove/microbit-samples/yotta_modules/ble/ble/SafeBool.h"
-    "C:/Users/peppe.ggu/Desktop/microbitprove/microbit-samples/yotta_modules/ble/ble/services/URIBeaconConfigService.h"
-    "C:/Users/peppe.ggu/Desktop/microbitprove/microbit-samples/yotta_modules/ble/ble/services/DFUService.h"
-    "C:/Users/peppe.ggu/Desktop/microbitprove/microbit-samples/yotta_modules/ble/ble/DiscoveredCharacteristicDescriptor.h"
-    "C:/Users/peppe.ggu/Desktop/microbitprove/microbit-samples/yotta_modules/ble/ble/deprecate.h"
-    "C:/Users/peppe.ggu/Desktop/microbitprove/microbit-samples/yotta_modules/ble/ble/services/UARTService.h"
-    "C:/Users/peppe.ggu/Desktop/microbitprove/microbit-samples/yotta_modules/ble/ble/BLE.h"
-    "C:/Users/peppe.ggu/Desktop/microbitprove/microbit-samples/yotta_modules/ble/ble/GattAttribute.h"
-    "C:/Users/peppe.ggu/Desktop/microbitprove/microbit-samples/yotta_modules/ble/ble/blecommon.h"
-    "C:/Users/peppe.ggu/Desktop/microbitprove/microbit-samples/yotta_modules/ble/ble/DiscoveredCharacteristic.h"
-    "C:/Users/peppe.ggu/Desktop/microbitprove/microbit-samples/yotta_modules/ble/ble/CallChainOfFunctionPointersWithContext.h"
-    "C:/Users/peppe.ggu/Desktop/microbitprove/microbit-samples/yotta_modules/ble/ble/services/EddystoneService.h"
-    "C:/Users/peppe.ggu/Desktop/microbitprove/microbit-samples/yotta_modules/ble/ble/GattCharacteristic.h"
-    "C:/Users/peppe.ggu/Desktop/microbitprove/microbit-samples/yotta_modules/ble/ble/ServiceDiscovery.h"
-    "C:/Users/peppe.ggu/Desktop/microbitprove/microbit-samples/yotta_modules/ble/ble/services/HealthThermometerService.h"
-    "C:/Users/peppe.ggu/Desktop/microbitprove/microbit-samples/yotta_modules/ble/ble/GattCallbackParamTypes.h"
-    "C:/Users/peppe.ggu/Desktop/microbitprove/microbit-samples/yotta_modules/ble/ble/SecurityManager.h"
-    "C:/Users/peppe.ggu/Desktop/microbitprove/microbit-samples/yotta_modules/ble/ble/BLEInstanceBase.h"
-    "C:/Users/peppe.ggu/Desktop/microbitprove/microbit-samples/yotta_modules/ble/ble/services/EddystoneConfigService.h"
-    "C:/Users/peppe.ggu/Desktop/microbitprove/microbit-samples/yotta_modules/ble/ble/services/EnvironmentalService.h"
-    "C:/Users/peppe.ggu/Desktop/microbitprove/microbit-samples/yotta_modules/ble/ble/services/DeviceInformationService.h"
-    "C:/Users/peppe.ggu/Desktop/microbitprove/microbit-samples/yotta_modules/ble/ble/DiscoveredService.h"
-    "C:/Users/peppe.ggu/Desktop/microbitprove/microbit-samples/yotta_modules/ble/ble/services/LinkLossService.h"
-    "C:/Users/peppe.ggu/Desktop/microbitprove/microbit-samples/yotta_modules/ble/ble/services/HeartRateService.h"
-    "C:/Users/peppe.ggu/Desktop/microbitprove/microbit-samples/yotta_modules/ble/ble/GattServer.h"
-    "C:/Users/peppe.ggu/Desktop/microbitprove/microbit-samples/yotta_modules/ble/ble/Gap.h"
-    "C:/Users/peppe.ggu/Desktop/microbitprove/microbit-samples/yotta_modules/ble/ble/FunctionPointerWithContext.h"
-    "C:/Users/peppe.ggu/Desktop/microbitprove/microbit-samples/yotta_modules/ble/ble/services/iBeacon.h"
-    "C:/Users/peppe.ggu/Desktop/microbitprove/microbit-samples/yotta_modules/ble/ble/GapAdvertisingData.h"
-    "C:/Users/peppe.ggu/Desktop/microbitprove/microbit-samples/yotta_modules/ble/ble/GattServerEvents.h"
-    "C:/Users/peppe.ggu/Desktop/microbitprove/microbit-samples/yotta_modules/ble/ble/GapScanningParams.h"
-    "C:/Users/peppe.ggu/Desktop/microbitprove/microbit-samples/yotta_modules/ble/ble/GattClient.h"
-    "C:/Users/peppe.ggu/Desktop/microbitprove/microbit-samples/yotta_modules/ble/ble/services/BatteryService.h"
-    "C:/Users/peppe.ggu/Desktop/microbitprove/microbit-samples/yotta_modules/ble/ble/BLEProtocol.h"
-    "C:/Users/peppe.ggu/Desktop/microbitprove/microbit-samples/yotta_modules/ble/ble/GattService.h"
-    "C:/Users/peppe.ggu/Desktop/microbitprove/microbit-samples/yotta_modules/ble/ble/GapAdvertisingParams.h"
-    "C:/Users/peppe.ggu/Desktop/microbitprove/microbit-samples/yotta_modules/ble/ble/CharacteristicDescriptorDiscovery.h"
-    "C:/Users/peppe.ggu/Desktop/microbitprove/microbit-samples/yotta_modules/ble/ble/GapEvents.h"
-    "C:/Users/peppe.ggu/Desktop/microbitprove/microbit-samples/yotta_modules/ble/ble/UUID.h"
+    "C:/Users/Francesco/Desktop/MicroBit/microbit-samples-master/yotta_modules/ble/ble/GattClient.h"
+    "C:/Users/Francesco/Desktop/MicroBit/microbit-samples-master/yotta_modules/ble/ble/SecurityManager.h"
+    "C:/Users/Francesco/Desktop/MicroBit/microbit-samples-master/yotta_modules/ble/ble/deprecate.h"
+    "C:/Users/Francesco/Desktop/MicroBit/microbit-samples-master/yotta_modules/ble/ble/BLEInstanceBase.h"
+    "C:/Users/Francesco/Desktop/MicroBit/microbit-samples-master/yotta_modules/ble/ble/GattServerEvents.h"
+    "C:/Users/Francesco/Desktop/MicroBit/microbit-samples-master/yotta_modules/ble/ble/DiscoveredService.h"
+    "C:/Users/Francesco/Desktop/MicroBit/microbit-samples-master/yotta_modules/ble/ble/services/EddystoneConfigService.h"
+    "C:/Users/Francesco/Desktop/MicroBit/microbit-samples-master/yotta_modules/ble/ble/services/DFUService.h"
+    "C:/Users/Francesco/Desktop/MicroBit/microbit-samples-master/yotta_modules/ble/ble/services/BatteryService.h"
+    "C:/Users/Francesco/Desktop/MicroBit/microbit-samples-master/yotta_modules/ble/ble/UUID.h"
+    "C:/Users/Francesco/Desktop/MicroBit/microbit-samples-master/yotta_modules/ble/ble/GapScanningParams.h"
+    "C:/Users/Francesco/Desktop/MicroBit/microbit-samples-master/yotta_modules/ble/ble/GattServer.h"
+    "C:/Users/Francesco/Desktop/MicroBit/microbit-samples-master/yotta_modules/ble/ble/services/EnvironmentalService.h"
+    "C:/Users/Francesco/Desktop/MicroBit/microbit-samples-master/yotta_modules/ble/ble/services/HealthThermometerService.h"
+    "C:/Users/Francesco/Desktop/MicroBit/microbit-samples-master/yotta_modules/ble/ble/BLEProtocol.h"
+    "C:/Users/Francesco/Desktop/MicroBit/microbit-samples-master/yotta_modules/ble/ble/services/EddystoneService.h"
+    "C:/Users/Francesco/Desktop/MicroBit/microbit-samples-master/yotta_modules/ble/ble/services/UARTService.h"
+    "C:/Users/Francesco/Desktop/MicroBit/microbit-samples-master/yotta_modules/ble/ble/services/iBeacon.h"
+    "C:/Users/Francesco/Desktop/MicroBit/microbit-samples-master/yotta_modules/ble/ble/GattCallbackParamTypes.h"
+    "C:/Users/Francesco/Desktop/MicroBit/microbit-samples-master/yotta_modules/ble/ble/GapEvents.h"
+    "C:/Users/Francesco/Desktop/MicroBit/microbit-samples-master/yotta_modules/ble/ble/CallChainOfFunctionPointersWithContext.h"
+    "C:/Users/Francesco/Desktop/MicroBit/microbit-samples-master/yotta_modules/ble/ble/services/URIBeaconConfigService.h"
+    "C:/Users/Francesco/Desktop/MicroBit/microbit-samples-master/yotta_modules/ble/ble/GattAttribute.h"
+    "C:/Users/Francesco/Desktop/MicroBit/microbit-samples-master/yotta_modules/ble/ble/services/HeartRateService.h"
+    "C:/Users/Francesco/Desktop/MicroBit/microbit-samples-master/yotta_modules/ble/ble/services/LinkLossService.h"
+    "C:/Users/Francesco/Desktop/MicroBit/microbit-samples-master/yotta_modules/ble/ble/BLE.h"
+    "C:/Users/Francesco/Desktop/MicroBit/microbit-samples-master/yotta_modules/ble/ble/DiscoveredCharacteristicDescriptor.h"
+    "C:/Users/Francesco/Desktop/MicroBit/microbit-samples-master/yotta_modules/ble/ble/GattCharacteristic.h"
+    "C:/Users/Francesco/Desktop/MicroBit/microbit-samples-master/yotta_modules/ble/ble/DiscoveredCharacteristic.h"
+    "C:/Users/Francesco/Desktop/MicroBit/microbit-samples-master/yotta_modules/ble/ble/GapAdvertisingParams.h"
+    "C:/Users/Francesco/Desktop/MicroBit/microbit-samples-master/yotta_modules/ble/ble/SafeBool.h"
+    "C:/Users/Francesco/Desktop/MicroBit/microbit-samples-master/yotta_modules/ble/ble/CharacteristicDescriptorDiscovery.h"
+    "C:/Users/Francesco/Desktop/MicroBit/microbit-samples-master/yotta_modules/ble/ble/services/DeviceInformationService.h"
+    "C:/Users/Francesco/Desktop/MicroBit/microbit-samples-master/yotta_modules/ble/ble/Gap.h"
+    "C:/Users/Francesco/Desktop/MicroBit/microbit-samples-master/yotta_modules/ble/ble/GapAdvertisingData.h"
+    "C:/Users/Francesco/Desktop/MicroBit/microbit-samples-master/yotta_modules/ble/ble/GattService.h"
+    "C:/Users/Francesco/Desktop/MicroBit/microbit-samples-master/yotta_modules/ble/ble/FunctionPointerWithContext.h"
+    "C:/Users/Francesco/Desktop/MicroBit/microbit-samples-master/yotta_modules/ble/ble/ServiceDiscovery.h"
+    "C:/Users/Francesco/Desktop/MicroBit/microbit-samples-master/yotta_modules/ble/ble/blecommon.h"
 )
 # force dependency on the config header for header files, which CMake otherwise wouldn't track:
-set_property(SOURCE ${YOTTA_AUTO_BLE_HEADER_FILES} PROPERTY OBJECT_DEPENDS "C:/Users/peppe.ggu/Desktop/microbitprove/microbit-samples/build/bbc-microbit-classic-gcc/yotta_config.h")
+set_property(SOURCE ${YOTTA_AUTO_BLE_HEADER_FILES} PROPERTY OBJECT_DEPENDS "C:/Users/Francesco/Desktop/MicroBit/microbit-samples-master/build/bbc-microbit-classic-gcc/yotta_config.h")
+set(YOTTA_AUTO_BLE_CPP_FILES
+    "C:/Users/Francesco/Desktop/MicroBit/microbit-samples-master/yotta_modules/ble/source/BLE.cpp"
+    "C:/Users/Francesco/Desktop/MicroBit/microbit-samples-master/yotta_modules/ble/source/DiscoveredCharacteristic.cpp"
+    "C:/Users/Francesco/Desktop/MicroBit/microbit-samples-master/yotta_modules/ble/source/GapScanningParams.cpp"
+    "C:/Users/Francesco/Desktop/MicroBit/microbit-samples-master/yotta_modules/ble/source/services/URIBeaconConfigService.cpp"
+    "C:/Users/Francesco/Desktop/MicroBit/microbit-samples-master/yotta_modules/ble/source/services/UARTService.cpp"
+    "C:/Users/Francesco/Desktop/MicroBit/microbit-samples-master/yotta_modules/ble/source/services/DFUService.cpp"
+)
+# force dependency on the config header for cpp files, which CMake otherwise wouldn't track:
+set_property(SOURCE ${YOTTA_AUTO_BLE_CPP_FILES} PROPERTY OBJECT_DEPENDS "C:/Users/Francesco/Desktop/MicroBit/microbit-samples-master/build/bbc-microbit-classic-gcc/yotta_config.h")
 
 
 add_library(ble
-    ${YOTTA_AUTO_BLE_CPP_FILES}
     ${YOTTA_AUTO_BLE_HEADER_FILES}
+    ${YOTTA_AUTO_BLE_CPP_FILES}
 )
 
 yotta_postprocess_target(LIBRARY ble)

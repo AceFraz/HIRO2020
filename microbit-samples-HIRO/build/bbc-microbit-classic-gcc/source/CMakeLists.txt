@@ -2,25 +2,25 @@
 
 cmake_minimum_required(VERSION 2.8.11)
 
-include_directories("C:/Users/peppe.ggu/Desktop/microbitprove/microbit-samples/source")
+include_directories("C:/Users/Francesco/Desktop/MicroBit/microbit-samples-master/source")
 
 
-set(YOTTA_AUTO_MICROBIT-SAMPLES_CPP_FILES
-    "C:/Users/peppe.ggu/Desktop/microbitprove/microbit-samples/source/main.cpp"
-    "C:/Users/peppe.ggu/Desktop/microbitprove/microbit-samples/source/Orologio.cpp"
-)
-# force dependency on the config header for cpp files, which CMake otherwise wouldn't track:
-set_property(SOURCE ${YOTTA_AUTO_MICROBIT-SAMPLES_CPP_FILES} PROPERTY OBJECT_DEPENDS "C:/Users/peppe.ggu/Desktop/microbitprove/microbit-samples/build/bbc-microbit-classic-gcc/yotta_config.h")
 set(YOTTA_AUTO_MICROBIT-SAMPLES_HEADER_FILES
-    "C:/Users/peppe.ggu/Desktop/microbitprove/microbit-samples/source/Orologio.h"
+    "C:/Users/Francesco/Desktop/MicroBit/microbit-samples-master/source/Orologio.h"
 )
 # force dependency on the config header for header files, which CMake otherwise wouldn't track:
-set_property(SOURCE ${YOTTA_AUTO_MICROBIT-SAMPLES_HEADER_FILES} PROPERTY OBJECT_DEPENDS "C:/Users/peppe.ggu/Desktop/microbitprove/microbit-samples/build/bbc-microbit-classic-gcc/yotta_config.h")
+set_property(SOURCE ${YOTTA_AUTO_MICROBIT-SAMPLES_HEADER_FILES} PROPERTY OBJECT_DEPENDS "C:/Users/Francesco/Desktop/MicroBit/microbit-samples-master/build/bbc-microbit-classic-gcc/yotta_config.h")
+set(YOTTA_AUTO_MICROBIT-SAMPLES_CPP_FILES
+    "C:/Users/Francesco/Desktop/MicroBit/microbit-samples-master/source/main.cpp"
+    "C:/Users/Francesco/Desktop/MicroBit/microbit-samples-master/source/Orologio.cpp"
+)
+# force dependency on the config header for cpp files, which CMake otherwise wouldn't track:
+set_property(SOURCE ${YOTTA_AUTO_MICROBIT-SAMPLES_CPP_FILES} PROPERTY OBJECT_DEPENDS "C:/Users/Francesco/Desktop/MicroBit/microbit-samples-master/build/bbc-microbit-classic-gcc/yotta_config.h")
 
 
 add_executable (microbit-samples
-    ${YOTTA_AUTO_MICROBIT-SAMPLES_CPP_FILES}
     ${YOTTA_AUTO_MICROBIT-SAMPLES_HEADER_FILES}
+    ${YOTTA_AUTO_MICROBIT-SAMPLES_CPP_FILES}
 )
 set_target_properties(microbit-samples PROPERTIES ENABLE_EXPORTS ON)
 

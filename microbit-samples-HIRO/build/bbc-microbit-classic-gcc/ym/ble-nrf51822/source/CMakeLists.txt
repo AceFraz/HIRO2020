@@ -2,56 +2,56 @@
 
 cmake_minimum_required(VERSION 2.8.11)
 
-include_directories("C:/Users/peppe.ggu/Desktop/microbitprove/microbit-samples/yotta_modules/ble-nrf51822/source")
+include_directories("C:/Users/Francesco/Desktop/MicroBit/microbit-samples-master/yotta_modules/ble-nrf51822/source")
 
 
-set(YOTTA_AUTO_BLE-NRF51822_CPP_FILES
-    "C:/Users/peppe.ggu/Desktop/microbitprove/microbit-samples/yotta_modules/ble-nrf51822/source/nRF5xGattClient.cpp"
-    "C:/Users/peppe.ggu/Desktop/microbitprove/microbit-samples/yotta_modules/ble-nrf51822/source/nRF5xGattServer.cpp"
-    "C:/Users/peppe.ggu/Desktop/microbitprove/microbit-samples/yotta_modules/ble-nrf51822/source/nRF5xn.cpp"
-    "C:/Users/peppe.ggu/Desktop/microbitprove/microbit-samples/yotta_modules/ble-nrf51822/source/btle/btle_gap.cpp"
-    "C:/Users/peppe.ggu/Desktop/microbitprove/microbit-samples/yotta_modules/ble-nrf51822/source/nRF5xGap.cpp"
-    "C:/Users/peppe.ggu/Desktop/microbitprove/microbit-samples/yotta_modules/ble-nrf51822/source/nRF5xCharacteristicDescriptorDiscoverer.cpp"
-    "C:/Users/peppe.ggu/Desktop/microbitprove/microbit-samples/yotta_modules/ble-nrf51822/source/nRF5xDiscoveredCharacteristic.cpp"
-    "C:/Users/peppe.ggu/Desktop/microbitprove/microbit-samples/yotta_modules/ble-nrf51822/source/btle/btle_security.cpp"
-    "C:/Users/peppe.ggu/Desktop/microbitprove/microbit-samples/yotta_modules/ble-nrf51822/source/btle/custom/custom_helper.cpp"
-    "C:/Users/peppe.ggu/Desktop/microbitprove/microbit-samples/yotta_modules/ble-nrf51822/source/btle/btle.cpp"
-    "C:/Users/peppe.ggu/Desktop/microbitprove/microbit-samples/yotta_modules/ble-nrf51822/source/btle/btle_advertising.cpp"
-    "C:/Users/peppe.ggu/Desktop/microbitprove/microbit-samples/yotta_modules/ble-nrf51822/source/nRF5xServiceDiscovery.cpp"
-    "C:/Users/peppe.ggu/Desktop/microbitprove/microbit-samples/yotta_modules/ble-nrf51822/source/btle/btle_discovery.cpp"
-)
-# force dependency on the config header for cpp files, which CMake otherwise wouldn't track:
-set_property(SOURCE ${YOTTA_AUTO_BLE-NRF51822_CPP_FILES} PROPERTY OBJECT_DEPENDS "C:/Users/peppe.ggu/Desktop/microbitprove/microbit-samples/build/bbc-microbit-classic-gcc/yotta_config.h")
 set(YOTTA_AUTO_BLE-NRF51822_HEADER_FILES
-    "C:/Users/peppe.ggu/Desktop/microbitprove/microbit-samples/yotta_modules/ble-nrf51822/source/nRF5xDiscoveredCharacteristic.h"
-    "C:/Users/peppe.ggu/Desktop/microbitprove/microbit-samples/yotta_modules/ble-nrf51822/source/btle/btle.h"
-    "C:/Users/peppe.ggu/Desktop/microbitprove/microbit-samples/yotta_modules/ble-nrf51822/source/btle/btle_advertising.h"
-    "C:/Users/peppe.ggu/Desktop/microbitprove/microbit-samples/yotta_modules/ble-nrf51822/source/btle/custom/custom_helper.h"
-    "C:/Users/peppe.ggu/Desktop/microbitprove/microbit-samples/yotta_modules/ble-nrf51822/source/projectconfig.h"
-    "C:/Users/peppe.ggu/Desktop/microbitprove/microbit-samples/yotta_modules/ble-nrf51822/source/common/common.h"
-    "C:/Users/peppe.ggu/Desktop/microbitprove/microbit-samples/yotta_modules/ble-nrf51822/source/btle/btle_gap.h"
-    "C:/Users/peppe.ggu/Desktop/microbitprove/microbit-samples/yotta_modules/ble-nrf51822/source/common/binary.h"
-    "C:/Users/peppe.ggu/Desktop/microbitprove/microbit-samples/yotta_modules/ble-nrf51822/source/nRF5xServiceDiscovery.h"
-    "C:/Users/peppe.ggu/Desktop/microbitprove/microbit-samples/yotta_modules/ble-nrf51822/source/nRF5xCharacteristicDescriptorDiscoverer.h"
-    "C:/Users/peppe.ggu/Desktop/microbitprove/microbit-samples/yotta_modules/ble-nrf51822/source/nRF5xGattClient.h"
-    "C:/Users/peppe.ggu/Desktop/microbitprove/microbit-samples/yotta_modules/ble-nrf51822/source/common/assertion.h"
-    "C:/Users/peppe.ggu/Desktop/microbitprove/microbit-samples/yotta_modules/ble-nrf51822/source/nRF5xn.h"
-    "C:/Users/peppe.ggu/Desktop/microbitprove/microbit-samples/yotta_modules/ble-nrf51822/source/nRF5xSecurityManager.h"
-    "C:/Users/peppe.ggu/Desktop/microbitprove/microbit-samples/yotta_modules/ble-nrf51822/source/btle/btle_discovery.h"
-    "C:/Users/peppe.ggu/Desktop/microbitprove/microbit-samples/yotta_modules/ble-nrf51822/source/common/ansi_escape.h"
-    "C:/Users/peppe.ggu/Desktop/microbitprove/microbit-samples/yotta_modules/ble-nrf51822/source/nRF5xGap.h"
-    "C:/Users/peppe.ggu/Desktop/microbitprove/microbit-samples/yotta_modules/ble-nrf51822/source/btle/btle_security.h"
-    "C:/Users/peppe.ggu/Desktop/microbitprove/microbit-samples/yotta_modules/ble-nrf51822/source/common/ble_error.h"
-    "C:/Users/peppe.ggu/Desktop/microbitprove/microbit-samples/yotta_modules/ble-nrf51822/source/common/compiler.h"
-    "C:/Users/peppe.ggu/Desktop/microbitprove/microbit-samples/yotta_modules/ble-nrf51822/source/nRF5xGattServer.h"
+    "C:/Users/Francesco/Desktop/MicroBit/microbit-samples-master/yotta_modules/ble-nrf51822/source/common/common.h"
+    "C:/Users/Francesco/Desktop/MicroBit/microbit-samples-master/yotta_modules/ble-nrf51822/source/btle/custom/custom_helper.h"
+    "C:/Users/Francesco/Desktop/MicroBit/microbit-samples-master/yotta_modules/ble-nrf51822/source/nRF5xServiceDiscovery.h"
+    "C:/Users/Francesco/Desktop/MicroBit/microbit-samples-master/yotta_modules/ble-nrf51822/source/common/binary.h"
+    "C:/Users/Francesco/Desktop/MicroBit/microbit-samples-master/yotta_modules/ble-nrf51822/source/btle/btle_gap.h"
+    "C:/Users/Francesco/Desktop/MicroBit/microbit-samples-master/yotta_modules/ble-nrf51822/source/common/compiler.h"
+    "C:/Users/Francesco/Desktop/MicroBit/microbit-samples-master/yotta_modules/ble-nrf51822/source/btle/btle_security.h"
+    "C:/Users/Francesco/Desktop/MicroBit/microbit-samples-master/yotta_modules/ble-nrf51822/source/nRF5xGap.h"
+    "C:/Users/Francesco/Desktop/MicroBit/microbit-samples-master/yotta_modules/ble-nrf51822/source/nRF5xGattServer.h"
+    "C:/Users/Francesco/Desktop/MicroBit/microbit-samples-master/yotta_modules/ble-nrf51822/source/nRF5xCharacteristicDescriptorDiscoverer.h"
+    "C:/Users/Francesco/Desktop/MicroBit/microbit-samples-master/yotta_modules/ble-nrf51822/source/common/ble_error.h"
+    "C:/Users/Francesco/Desktop/MicroBit/microbit-samples-master/yotta_modules/ble-nrf51822/source/common/assertion.h"
+    "C:/Users/Francesco/Desktop/MicroBit/microbit-samples-master/yotta_modules/ble-nrf51822/source/nRF5xn.h"
+    "C:/Users/Francesco/Desktop/MicroBit/microbit-samples-master/yotta_modules/ble-nrf51822/source/nRF5xDiscoveredCharacteristic.h"
+    "C:/Users/Francesco/Desktop/MicroBit/microbit-samples-master/yotta_modules/ble-nrf51822/source/btle/btle.h"
+    "C:/Users/Francesco/Desktop/MicroBit/microbit-samples-master/yotta_modules/ble-nrf51822/source/btle/btle_advertising.h"
+    "C:/Users/Francesco/Desktop/MicroBit/microbit-samples-master/yotta_modules/ble-nrf51822/source/nRF5xGattClient.h"
+    "C:/Users/Francesco/Desktop/MicroBit/microbit-samples-master/yotta_modules/ble-nrf51822/source/common/ansi_escape.h"
+    "C:/Users/Francesco/Desktop/MicroBit/microbit-samples-master/yotta_modules/ble-nrf51822/source/projectconfig.h"
+    "C:/Users/Francesco/Desktop/MicroBit/microbit-samples-master/yotta_modules/ble-nrf51822/source/btle/btle_discovery.h"
+    "C:/Users/Francesco/Desktop/MicroBit/microbit-samples-master/yotta_modules/ble-nrf51822/source/nRF5xSecurityManager.h"
 )
 # force dependency on the config header for header files, which CMake otherwise wouldn't track:
-set_property(SOURCE ${YOTTA_AUTO_BLE-NRF51822_HEADER_FILES} PROPERTY OBJECT_DEPENDS "C:/Users/peppe.ggu/Desktop/microbitprove/microbit-samples/build/bbc-microbit-classic-gcc/yotta_config.h")
+set_property(SOURCE ${YOTTA_AUTO_BLE-NRF51822_HEADER_FILES} PROPERTY OBJECT_DEPENDS "C:/Users/Francesco/Desktop/MicroBit/microbit-samples-master/build/bbc-microbit-classic-gcc/yotta_config.h")
+set(YOTTA_AUTO_BLE-NRF51822_CPP_FILES
+    "C:/Users/Francesco/Desktop/MicroBit/microbit-samples-master/yotta_modules/ble-nrf51822/source/btle/custom/custom_helper.cpp"
+    "C:/Users/Francesco/Desktop/MicroBit/microbit-samples-master/yotta_modules/ble-nrf51822/source/btle/btle_discovery.cpp"
+    "C:/Users/Francesco/Desktop/MicroBit/microbit-samples-master/yotta_modules/ble-nrf51822/source/nRF5xGattServer.cpp"
+    "C:/Users/Francesco/Desktop/MicroBit/microbit-samples-master/yotta_modules/ble-nrf51822/source/nRF5xCharacteristicDescriptorDiscoverer.cpp"
+    "C:/Users/Francesco/Desktop/MicroBit/microbit-samples-master/yotta_modules/ble-nrf51822/source/nRF5xServiceDiscovery.cpp"
+    "C:/Users/Francesco/Desktop/MicroBit/microbit-samples-master/yotta_modules/ble-nrf51822/source/btle/btle.cpp"
+    "C:/Users/Francesco/Desktop/MicroBit/microbit-samples-master/yotta_modules/ble-nrf51822/source/btle/btle_advertising.cpp"
+    "C:/Users/Francesco/Desktop/MicroBit/microbit-samples-master/yotta_modules/ble-nrf51822/source/btle/btle_security.cpp"
+    "C:/Users/Francesco/Desktop/MicroBit/microbit-samples-master/yotta_modules/ble-nrf51822/source/nRF5xn.cpp"
+    "C:/Users/Francesco/Desktop/MicroBit/microbit-samples-master/yotta_modules/ble-nrf51822/source/nRF5xGap.cpp"
+    "C:/Users/Francesco/Desktop/MicroBit/microbit-samples-master/yotta_modules/ble-nrf51822/source/btle/btle_gap.cpp"
+    "C:/Users/Francesco/Desktop/MicroBit/microbit-samples-master/yotta_modules/ble-nrf51822/source/nRF5xDiscoveredCharacteristic.cpp"
+    "C:/Users/Francesco/Desktop/MicroBit/microbit-samples-master/yotta_modules/ble-nrf51822/source/nRF5xGattClient.cpp"
+)
+# force dependency on the config header for cpp files, which CMake otherwise wouldn't track:
+set_property(SOURCE ${YOTTA_AUTO_BLE-NRF51822_CPP_FILES} PROPERTY OBJECT_DEPENDS "C:/Users/Francesco/Desktop/MicroBit/microbit-samples-master/build/bbc-microbit-classic-gcc/yotta_config.h")
 
 
 add_library(ble-nrf51822
-    ${YOTTA_AUTO_BLE-NRF51822_CPP_FILES}
     ${YOTTA_AUTO_BLE-NRF51822_HEADER_FILES}
+    ${YOTTA_AUTO_BLE-NRF51822_CPP_FILES}
 )
 
 yotta_postprocess_target(LIBRARY ble-nrf51822)
@@ -63,4 +63,4 @@ target_link_libraries(ble-nrf51822
     nrf51-sdk
 )
 
-include("C:/Users/peppe.ggu/Desktop/microbitprove/microbit-samples/yotta_modules/ble-nrf51822/source/supress-warnings.cmake")
+include("C:/Users/Francesco/Desktop/MicroBit/microbit-samples-master/yotta_modules/ble-nrf51822/source/supress-warnings.cmake")

@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/peppe.ggu/Desktop/microbitprove/microbit-samples/build/bbc-microbit-classic-gcc/ym/microbit
+# Install script for directory: C:/Users/Francesco/Desktop/MicroBit/microbit-samples-master/build/bbc-microbit-classic-gcc/ym/microbit
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -34,8 +34,8 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("C:/Users/peppe.ggu/Desktop/microbitprove/microbit-samples/build/bbc-microbit-classic-gcc/ym/microbit-dal/cmake_install.cmake")
-  include("C:/Users/peppe.ggu/Desktop/microbitprove/microbit-samples/build/bbc-microbit-classic-gcc/ym/microbit/source/cmake_install.cmake")
+  include("C:/Users/Francesco/Desktop/MicroBit/microbit-samples-master/build/bbc-microbit-classic-gcc/ym/microbit-dal/cmake_install.cmake")
+  include("C:/Users/Francesco/Desktop/MicroBit/microbit-samples-master/build/bbc-microbit-classic-gcc/ym/microbit/source/cmake_install.cmake")
 
 endif()
 

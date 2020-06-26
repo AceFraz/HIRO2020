@@ -5,5 +5,5 @@ if(YOTTA_META_TOOLCHAIN_FILE_INCLUDED)
 endif()
 set(YOTTA_META_TOOLCHAIN_FILE_INCLUDED 1)
 
-include("C:/Users/peppe.ggu/Desktop/microbitprove/microbit-samples/yotta_targets/mbed-gcc/CMake/toolchain.cmake")
-include("C:/Users/peppe.ggu/Desktop/microbitprove/microbit-samples/yotta_targets/bbc-microbit-classic-gcc/CMake/toolchain.cmake")
+include("C:/Users/Francesco/Desktop/MicroBit/microbit-samples-master/yotta_targets/mbed-gcc/CMake/toolchain.cmake")
+include("C:/Users/Francesco/Desktop/MicroBit/microbit-samples-master/yotta_targets/bbc-microbit-classic-gcc/CMake/toolchain.cmake")

@@ -196,7 +196,7 @@ rule CXX_EXECUTABLE_LINKER__microbit-samples_RelWithDebInfo
 # Rule for re-running cmake.
 
 rule RERUN_CMAKE
-  command = "C:\Program Files (x86)\CMake\bin\cmake.exe" --regenerate-during-build -SC:\Users\peppe.ggu\Desktop\microbitprove\microbit-samples\build\bbc-microbit-classic-gcc -BC:\Users\peppe.ggu\Desktop\microbitprove\microbit-samples\build\bbc-microbit-classic-gcc
+  command = "C:\Program Files\CMake\bin\cmake.exe" --regenerate-during-build -SC:\Users\Francesco\Desktop\MicroBit\microbit-samples-master\build\bbc-microbit-classic-gcc -BC:\Users\Francesco\Desktop\MicroBit\microbit-samples-master\build\bbc-microbit-classic-gcc
   description = Re-running CMake...
   generator = 1
 
@@ -205,7 +205,7 @@ rule RERUN_CMAKE
 # Rule for cleaning all built files.
 
 rule CLEAN
-  command = C:\PROGRA~1\ninja\ninja.exe $FILE_ARG -t clean $TARGETS
+  command = C:\Ninja\ninja.exe $FILE_ARG -t clean $TARGETS
   description = Cleaning all built files...
 
 
@@ -213,6 +213,6 @@ rule CLEAN
 # Rule for printing all primary targets available.
 
 rule HELP
-  command = C:\PROGRA~1\ninja\ninja.exe -t targets
+  command = C:\Ninja\ninja.exe -t targets
   description = All primary targets available:
 

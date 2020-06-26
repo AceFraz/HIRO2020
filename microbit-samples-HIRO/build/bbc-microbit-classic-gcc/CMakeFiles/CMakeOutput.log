@@ -1,5 +1,5 @@
 The target system is: mbedOS - 1 - armv7-m
-The host system is: Windows - 10.0.18363 - AMD64
+The host system is: Windows - 10.0.18362 - AMD64
 Checking whether the ASM compiler is GNU using "--version" matched "(GNU assembler)|(GCC)|(Free Software Foundation)":
 arm-none-eabi-gcc.exe (GNU Arm Embedded Toolchain 9-2020-q2-update) 9.3.1 20200408 (release)
 Copyright (C) 2019 Free Software Foundation, Inc.

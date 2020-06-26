@@ -16,7 +16,7 @@ add_custom_target(all_tests)
 cmake_policy(SET CMP0017 OLD)
 
 # toolchain file for bbc-microbit-classic-gcc
-set(CMAKE_TOOLCHAIN_FILE "C:/Users/peppe.ggu/Desktop/microbitprove/microbit-samples/build/bbc-microbit-classic-gcc/toolchain.cmake")
+set(CMAKE_TOOLCHAIN_FILE "C:/Users/Francesco/Desktop/MicroBit/microbit-samples-master/build/bbc-microbit-classic-gcc/toolchain.cmake")
 
 # provide function for post-processing executables
 function (yotta_postprocess_target target_type_ target_name_)
@@ -41,16 +41,13 @@ endfunction()
 set(YOTTA_BUILD_YEAR "2020") # UTC year
 set(YOTTA_BUILD_MONTH "6") # UTC month 1-12
 set(YOTTA_BUILD_DAY "26") # UTC day 1-31
-set(YOTTA_BUILD_HOUR "9") # UTC hour 0-24
-set(YOTTA_BUILD_MINUTE "37") # UTC minute 0-59
-set(YOTTA_BUILD_SECOND "35") # UTC second 0-61
-set(YOTTA_BUILD_UUID "4f36afc3-cd5d-4e06-ae89-708447fdad99") # unique random UUID for each build
-set(YOTTA_BUILD_VCS_ID "b'c3b02564fd8082f3bf80472e679aa2f9b707c7c2'") # git or mercurial hash
-set(YOTTA_BUILD_VCS_CLEAN "0") # evaluates true if the version control system was clean, otherwise false
-set(YOTTA_BUILD_VCS_DESCRIPTION "b'v2.1.1'") # git describe or mercurial equivalent
+set(YOTTA_BUILD_HOUR "13") # UTC hour 0-24
+set(YOTTA_BUILD_MINUTE "22") # UTC minute 0-59
+set(YOTTA_BUILD_SECOND "4") # UTC second 0-61
+set(YOTTA_BUILD_UUID "85aab941-0437-4a02-ae20-572ababe8c6d") # unique random UUID for each build
 set(TARGET BBC_MICROBIT_CLASSIC_GCC)
 set(TARGET_LIKE_BBC_MICROBIT_CLASSIC_GCC TRUE)
-set(YOTTA_BUILD_INFO_HEADER "C:/Users/peppe.ggu/Desktop/microbitprove/microbit-samples/build/bbc-microbit-classic-gcc/yotta_build_info.h")
+set(YOTTA_BUILD_INFO_HEADER "C:/Users/Francesco/Desktop/MicroBit/microbit-samples-master/build/bbc-microbit-classic-gcc/yotta_build_info.h")
 set(TARGET_LIKE_BBC_MICROBIT_CLASSIC_GCC TRUE)
 set(TARGET_LIKE_NRF51822 TRUE)
 set(TARGET_LIKE_NRF TRUE)
@@ -77,7 +74,7 @@ set(YOTTA_CFG_ARCH_ARM TRUE)
 set(YOTTA_CFG_MINAR TRUE)
 set(YOTTA_CFG_MINAR_INITIAL_EVENT_POOL_SIZE 50)
 set(YOTTA_CFG_MINAR_ADDITIONAL_EVENT_POOLS_SIZE 100)
-set(YOTTA_CONFIG_MERGED_JSON_FILE "C:/Users/peppe.ggu/Desktop/microbitprove/microbit-samples/build/bbc-microbit-classic-gcc/yotta_config.json")
+set(YOTTA_CONFIG_MERGED_JSON_FILE "C:/Users/Francesco/Desktop/MicroBit/microbit-samples-master/build/bbc-microbit-classic-gcc/yotta_config.json")
 
 
 project(microbit-samples)
@@ -91,22 +88,22 @@ if(NOT DEFINED YOTTA_FORCE_INCLUDE_FLAG)
         set(YOTTA_FORCE_INCLUDE_FLAG "-include")
     endif()
 endif()
-add_definitions("${YOTTA_FORCE_INCLUDE_FLAG} \"C:/Users/peppe.ggu/Desktop/microbitprove/microbit-samples/build/bbc-microbit-classic-gcc/yotta_config.h\"")
+add_definitions("${YOTTA_FORCE_INCLUDE_FLAG} \"C:/Users/Francesco/Desktop/MicroBit/microbit-samples-master/build/bbc-microbit-classic-gcc/yotta_config.h\"")
 
 # include root directories of all components we depend on (directly and
 # indirectly, including ourself)
-include_directories("C:/Users/peppe.ggu/Desktop/microbitprove/microbit-samples")
-include_directories("C:/Users/peppe.ggu/Desktop/microbitprove/microbit-samples/yotta_modules/microbit")
-include_directories("C:/Users/peppe.ggu/Desktop/microbitprove/microbit-samples/yotta_modules/microbit-dal")
-include_directories("C:/Users/peppe.ggu/Desktop/microbitprove/microbit-samples/yotta_modules/mbed-classic")
-include_directories("C:/Users/peppe.ggu/Desktop/microbitprove/microbit-samples/yotta_modules/ble")
-include_directories("C:/Users/peppe.ggu/Desktop/microbitprove/microbit-samples/yotta_modules/ble-nrf51822")
-include_directories("C:/Users/peppe.ggu/Desktop/microbitprove/microbit-samples/yotta_modules/nrf51-sdk")
+include_directories("C:/Users/Francesco/Desktop/MicroBit/microbit-samples-master")
+include_directories("C:/Users/Francesco/Desktop/MicroBit/microbit-samples-master/yotta_modules/microbit")
+include_directories("C:/Users/Francesco/Desktop/MicroBit/microbit-samples-master/yotta_modules/microbit-dal")
+include_directories("C:/Users/Francesco/Desktop/MicroBit/microbit-samples-master/yotta_modules/mbed-classic")
+include_directories("C:/Users/Francesco/Desktop/MicroBit/microbit-samples-master/yotta_modules/ble")
+include_directories("C:/Users/Francesco/Desktop/MicroBit/microbit-samples-master/yotta_modules/ble-nrf51822")
+include_directories("C:/Users/Francesco/Desktop/MicroBit/microbit-samples-master/yotta_modules/nrf51-sdk")
 
 
 # recurse into dependencies that aren't built elsewhere
 add_subdirectory(
-   "C:/Users/peppe.ggu/Desktop/microbitprove/microbit-samples/build/bbc-microbit-classic-gcc/ym/microbit"
+   "C:/Users/Francesco/Desktop/MicroBit/microbit-samples-master/build/bbc-microbit-classic-gcc/ym/microbit"
    "${CMAKE_BINARY_DIR}/ym/microbit"
 )
 
@@ -115,44 +112,44 @@ add_subdirectory(
 # And others (typically CMSIS implementations) need to export non-system header
 # files. Please don't use this facility. Please. It's much, much better to fix
 # implementations that import these headers to import them using the full path.
-include_directories("C:/Users/peppe.ggu/Desktop/microbitprove/microbit-samples/yotta_modules/microbit/inc")
-include_directories("C:/Users/peppe.ggu/Desktop/microbitprove/microbit-samples/yotta_modules/microbit-dal/inc/core")
-include_directories("C:/Users/peppe.ggu/Desktop/microbitprove/microbit-samples/yotta_modules/microbit-dal/inc/types")
-include_directories("C:/Users/peppe.ggu/Desktop/microbitprove/microbit-samples/yotta_modules/microbit-dal/inc/drivers")
-include_directories("C:/Users/peppe.ggu/Desktop/microbitprove/microbit-samples/yotta_modules/microbit-dal/inc/bluetooth")
-include_directories("C:/Users/peppe.ggu/Desktop/microbitprove/microbit-samples/yotta_modules/microbit-dal/inc/platform")
-include_directories("C:/Users/peppe.ggu/Desktop/microbitprove/microbit-samples/yotta_modules/mbed-classic/api")
-include_directories("C:/Users/peppe.ggu/Desktop/microbitprove/microbit-samples/yotta_modules/mbed-classic/hal")
-include_directories("C:/Users/peppe.ggu/Desktop/microbitprove/microbit-samples/yotta_modules/mbed-classic/targets/hal")
-include_directories("C:/Users/peppe.ggu/Desktop/microbitprove/microbit-samples/yotta_modules/mbed-classic/targets/cmsis")
-include_directories("C:/Users/peppe.ggu/Desktop/microbitprove/microbit-samples/yotta_modules/ble-nrf51822/source/btle")
-include_directories("C:/Users/peppe.ggu/Desktop/microbitprove/microbit-samples/yotta_modules/ble-nrf51822/source/btle/custom")
-include_directories("C:/Users/peppe.ggu/Desktop/microbitprove/microbit-samples/yotta_modules/ble-nrf51822/source/common")
-include_directories("C:/Users/peppe.ggu/Desktop/microbitprove/microbit-samples/yotta_modules/nrf51-sdk/source/nordic_sdk/components/ble/ble_radio_notification")
-include_directories("C:/Users/peppe.ggu/Desktop/microbitprove/microbit-samples/yotta_modules/nrf51-sdk/source/nordic_sdk/components/ble/ble_services/ble_dfu")
-include_directories("C:/Users/peppe.ggu/Desktop/microbitprove/microbit-samples/yotta_modules/nrf51-sdk/source/nordic_sdk/components/ble/common")
-include_directories("C:/Users/peppe.ggu/Desktop/microbitprove/microbit-samples/yotta_modules/nrf51-sdk/source/nordic_sdk/components/ble/device_manager")
-include_directories("C:/Users/peppe.ggu/Desktop/microbitprove/microbit-samples/yotta_modules/nrf51-sdk/source/nordic_sdk/components/ble/device_manager/config")
-include_directories("C:/Users/peppe.ggu/Desktop/microbitprove/microbit-samples/yotta_modules/nrf51-sdk/source/nordic_sdk/components/ble/peer_manager")
-include_directories("C:/Users/peppe.ggu/Desktop/microbitprove/microbit-samples/yotta_modules/nrf51-sdk/source/nordic_sdk/components/device")
-include_directories("C:/Users/peppe.ggu/Desktop/microbitprove/microbit-samples/yotta_modules/nrf51-sdk/source/nordic_sdk/components/drivers_nrf/ble_flash")
-include_directories("C:/Users/peppe.ggu/Desktop/microbitprove/microbit-samples/yotta_modules/nrf51-sdk/source/nordic_sdk/components/drivers_nrf/delay")
-include_directories("C:/Users/peppe.ggu/Desktop/microbitprove/microbit-samples/yotta_modules/nrf51-sdk/source/nordic_sdk/components/drivers_nrf/hal")
-include_directories("C:/Users/peppe.ggu/Desktop/microbitprove/microbit-samples/yotta_modules/nrf51-sdk/source/nordic_sdk/components/drivers_nrf/pstorage")
-include_directories("C:/Users/peppe.ggu/Desktop/microbitprove/microbit-samples/yotta_modules/nrf51-sdk/source/nordic_sdk/components/drivers_nrf/pstorage/config")
-include_directories("C:/Users/peppe.ggu/Desktop/microbitprove/microbit-samples/yotta_modules/nrf51-sdk/source/nordic_sdk/components/libraries/bootloader_dfu")
-include_directories("C:/Users/peppe.ggu/Desktop/microbitprove/microbit-samples/yotta_modules/nrf51-sdk/source/nordic_sdk/components/libraries/bootloader_dfu/hci_transport")
-include_directories("C:/Users/peppe.ggu/Desktop/microbitprove/microbit-samples/yotta_modules/nrf51-sdk/source/nordic_sdk/components/libraries/crc16")
-include_directories("C:/Users/peppe.ggu/Desktop/microbitprove/microbit-samples/yotta_modules/nrf51-sdk/source/nordic_sdk/components/libraries/hci")
-include_directories("C:/Users/peppe.ggu/Desktop/microbitprove/microbit-samples/yotta_modules/nrf51-sdk/source/nordic_sdk/components/libraries/scheduler")
-include_directories("C:/Users/peppe.ggu/Desktop/microbitprove/microbit-samples/yotta_modules/nrf51-sdk/source/nordic_sdk/components/libraries/timer")
-include_directories("C:/Users/peppe.ggu/Desktop/microbitprove/microbit-samples/yotta_modules/nrf51-sdk/source/nordic_sdk/components/libraries/util")
-include_directories("C:/Users/peppe.ggu/Desktop/microbitprove/microbit-samples/yotta_modules/nrf51-sdk/source/nordic_sdk/components/libraries/fds")
-include_directories("C:/Users/peppe.ggu/Desktop/microbitprove/microbit-samples/yotta_modules/nrf51-sdk/source/nordic_sdk/components/libraries/fstorage")
-include_directories("C:/Users/peppe.ggu/Desktop/microbitprove/microbit-samples/yotta_modules/nrf51-sdk/source/nordic_sdk/components/libraries/experimental_section_vars")
-include_directories("C:/Users/peppe.ggu/Desktop/microbitprove/microbit-samples/yotta_modules/nrf51-sdk/source/nordic_sdk/components/softdevice/common/softdevice_handler")
-include_directories("C:/Users/peppe.ggu/Desktop/microbitprove/microbit-samples/yotta_modules/nrf51-sdk/source/nordic_sdk/components/softdevice/s130/headers")
-include_directories("C:/Users/peppe.ggu/Desktop/microbitprove/microbit-samples/yotta_modules/nrf51-sdk/source/nordic_sdk/components/toolchain")
+include_directories("C:/Users/Francesco/Desktop/MicroBit/microbit-samples-master/yotta_modules/microbit/inc")
+include_directories("C:/Users/Francesco/Desktop/MicroBit/microbit-samples-master/yotta_modules/microbit-dal/inc/core")
+include_directories("C:/Users/Francesco/Desktop/MicroBit/microbit-samples-master/yotta_modules/microbit-dal/inc/types")
+include_directories("C:/Users/Francesco/Desktop/MicroBit/microbit-samples-master/yotta_modules/microbit-dal/inc/drivers")
+include_directories("C:/Users/Francesco/Desktop/MicroBit/microbit-samples-master/yotta_modules/microbit-dal/inc/bluetooth")
+include_directories("C:/Users/Francesco/Desktop/MicroBit/microbit-samples-master/yotta_modules/microbit-dal/inc/platform")
+include_directories("C:/Users/Francesco/Desktop/MicroBit/microbit-samples-master/yotta_modules/mbed-classic/api")
+include_directories("C:/Users/Francesco/Desktop/MicroBit/microbit-samples-master/yotta_modules/mbed-classic/hal")
+include_directories("C:/Users/Francesco/Desktop/MicroBit/microbit-samples-master/yotta_modules/mbed-classic/targets/hal")
+include_directories("C:/Users/Francesco/Desktop/MicroBit/microbit-samples-master/yotta_modules/mbed-classic/targets/cmsis")
+include_directories("C:/Users/Francesco/Desktop/MicroBit/microbit-samples-master/yotta_modules/ble-nrf51822/source/btle")
+include_directories("C:/Users/Francesco/Desktop/MicroBit/microbit-samples-master/yotta_modules/ble-nrf51822/source/btle/custom")
+include_directories("C:/Users/Francesco/Desktop/MicroBit/microbit-samples-master/yotta_modules/ble-nrf51822/source/common")
+include_directories("C:/Users/Francesco/Desktop/MicroBit/microbit-samples-master/yotta_modules/nrf51-sdk/source/nordic_sdk/components/ble/ble_radio_notification")
+include_directories("C:/Users/Francesco/Desktop/MicroBit/microbit-samples-master/yotta_modules/nrf51-sdk/source/nordic_sdk/components/ble/ble_services/ble_dfu")
+include_directories("C:/Users/Francesco/Desktop/MicroBit/microbit-samples-master/yotta_modules/nrf51-sdk/source/nordic_sdk/components/ble/common")
+include_directories("C:/Users/Francesco/Desktop/MicroBit/microbit-samples-master/yotta_modules/nrf51-sdk/source/nordic_sdk/components/ble/device_manager")
+include_directories("C:/Users/Francesco/Desktop/MicroBit/microbit-samples-master/yotta_modules/nrf51-sdk/source/nordic_sdk/components/ble/device_manager/config")
+include_directories("C:/Users/Francesco/Desktop/MicroBit/microbit-samples-master/yotta_modules/nrf51-sdk/source/nordic_sdk/components/ble/peer_manager")
+include_directories("C:/Users/Francesco/Desktop/MicroBit/microbit-samples-master/yotta_modules/nrf51-sdk/source/nordic_sdk/components/device")
+include_directories("C:/Users/Francesco/Desktop/MicroBit/microbit-samples-master/yotta_modules/nrf51-sdk/source/nordic_sdk/components/drivers_nrf/ble_flash")
+include_directories("C:/Users/Francesco/Desktop/MicroBit/microbit-samples-master/yotta_modules/nrf51-sdk/source/nordic_sdk/components/drivers_nrf/delay")
+include_directories("C:/Users/Francesco/Desktop/MicroBit/microbit-samples-master/yotta_modules/nrf51-sdk/source/nordic_sdk/components/drivers_nrf/hal")
+include_directories("C:/Users/Francesco/Desktop/MicroBit/microbit-samples-master/yotta_modules/nrf51-sdk/source/nordic_sdk/components/drivers_nrf/pstorage")
+include_directories("C:/Users/Francesco/Desktop/MicroBit/microbit-samples-master/yotta_modules/nrf51-sdk/source/nordic_sdk/components/drivers_nrf/pstorage/config")
+include_directories("C:/Users/Francesco/Desktop/MicroBit/microbit-samples-master/yotta_modules/nrf51-sdk/source/nordic_sdk/components/libraries/bootloader_dfu")
+include_directories("C:/Users/Francesco/Desktop/MicroBit/microbit-samples-master/yotta_modules/nrf51-sdk/source/nordic_sdk/components/libraries/bootloader_dfu/hci_transport")
+include_directories("C:/Users/Francesco/Desktop/MicroBit/microbit-samples-master/yotta_modules/nrf51-sdk/source/nordic_sdk/components/libraries/crc16")
+include_directories("C:/Users/Francesco/Desktop/MicroBit/microbit-samples-master/yotta_modules/nrf51-sdk/source/nordic_sdk/components/libraries/hci")
+include_directories("C:/Users/Francesco/Desktop/MicroBit/microbit-samples-master/yotta_modules/nrf51-sdk/source/nordic_sdk/components/libraries/scheduler")
+include_directories("C:/Users/Francesco/Desktop/MicroBit/microbit-samples-master/yotta_modules/nrf51-sdk/source/nordic_sdk/components/libraries/timer")
+include_directories("C:/Users/Francesco/Desktop/MicroBit/microbit-samples-master/yotta_modules/nrf51-sdk/source/nordic_sdk/components/libraries/util")
+include_directories("C:/Users/Francesco/Desktop/MicroBit/microbit-samples-master/yotta_modules/nrf51-sdk/source/nordic_sdk/components/libraries/fds")
+include_directories("C:/Users/Francesco/Desktop/MicroBit/microbit-samples-master/yotta_modules/nrf51-sdk/source/nordic_sdk/components/libraries/fstorage")
+include_directories("C:/Users/Francesco/Desktop/MicroBit/microbit-samples-master/yotta_modules/nrf51-sdk/source/nordic_sdk/components/libraries/experimental_section_vars")
+include_directories("C:/Users/Francesco/Desktop/MicroBit/microbit-samples-master/yotta_modules/nrf51-sdk/source/nordic_sdk/components/softdevice/common/softdevice_handler")
+include_directories("C:/Users/Francesco/Desktop/MicroBit/microbit-samples-master/yotta_modules/nrf51-sdk/source/nordic_sdk/components/softdevice/s130/headers")
+include_directories("C:/Users/Francesco/Desktop/MicroBit/microbit-samples-master/yotta_modules/nrf51-sdk/source/nordic_sdk/components/toolchain")
 
 
 # modules with custom CMake build systems may append to the
@@ -180,7 +177,7 @@ set(YOTTA_MODULE_NAME microbit-samples)
 # add_subdirectory because the directories referred to here exist in the source
 # tree, not the working directory
 add_subdirectory(
-    "C:/Users/peppe.ggu/Desktop/microbitprove/microbit-samples/build/bbc-microbit-classic-gcc/source"
+    "C:/Users/Francesco/Desktop/MicroBit/microbit-samples-master/build/bbc-microbit-classic-gcc/source"
     "${CMAKE_BINARY_DIR}/./source"
 )
 

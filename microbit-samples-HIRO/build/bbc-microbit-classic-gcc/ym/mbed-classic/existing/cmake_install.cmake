@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/peppe.ggu/Desktop/microbitprove/microbit-samples/yotta_modules/mbed-classic
+# Install script for directory: C:/Users/Francesco/Desktop/MicroBit/microbit-samples-master/yotta_modules/mbed-classic
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

@@ -6,8 +6,8 @@ project(mbed-classic)
 
 # include root directories of all components we depend on (directly and
 # indirectly, including ourself)
-include_directories("C:/Users/peppe.ggu/Desktop/microbitprove/microbit-samples")
-include_directories("C:/Users/peppe.ggu/Desktop/microbitprove/microbit-samples/yotta_modules/mbed-classic")
+include_directories("C:/Users/Francesco/Desktop/MicroBit/microbit-samples-master")
+include_directories("C:/Users/Francesco/Desktop/MicroBit/microbit-samples-master/yotta_modules/mbed-classic")
 
 
 # recurse into dependencies that aren't built elsewhere
@@ -17,10 +17,10 @@ include_directories("C:/Users/peppe.ggu/Desktop/microbitprove/microbit-samples/y
 # And others (typically CMSIS implementations) need to export non-system header
 # files. Please don't use this facility. Please. It's much, much better to fix
 # implementations that import these headers to import them using the full path.
-include_directories("C:/Users/peppe.ggu/Desktop/microbitprove/microbit-samples/yotta_modules/mbed-classic/api")
-include_directories("C:/Users/peppe.ggu/Desktop/microbitprove/microbit-samples/yotta_modules/mbed-classic/hal")
-include_directories("C:/Users/peppe.ggu/Desktop/microbitprove/microbit-samples/yotta_modules/mbed-classic/targets/hal")
-include_directories("C:/Users/peppe.ggu/Desktop/microbitprove/microbit-samples/yotta_modules/mbed-classic/targets/cmsis")
+include_directories("C:/Users/Francesco/Desktop/MicroBit/microbit-samples-master/yotta_modules/mbed-classic/api")
+include_directories("C:/Users/Francesco/Desktop/MicroBit/microbit-samples-master/yotta_modules/mbed-classic/hal")
+include_directories("C:/Users/Francesco/Desktop/MicroBit/microbit-samples-master/yotta_modules/mbed-classic/targets/hal")
+include_directories("C:/Users/Francesco/Desktop/MicroBit/microbit-samples-master/yotta_modules/mbed-classic/targets/cmsis")
 
 
 # modules with custom CMake build systems may append to the
@@ -42,8 +42,8 @@ set(YOTTA_MODULE_NAME mbed-classic)
 
 # delegate to an existing CMakeLists.txt:
 add_subdirectory(
-    "C:/Users/peppe.ggu/Desktop/microbitprove/microbit-samples/yotta_modules/mbed-classic"
-    "C:/Users/peppe.ggu/Desktop/microbitprove/microbit-samples/build/bbc-microbit-classic-gcc/ym/mbed-classic/existing"
+    "C:/Users/Francesco/Desktop/MicroBit/microbit-samples-master/yotta_modules/mbed-classic"
+    "C:/Users/Francesco/Desktop/MicroBit/microbit-samples-master/build/bbc-microbit-classic-gcc/ym/mbed-classic/existing"
 )
 
 # make YOTTA_MODULE_NAME available as a preprocessor symbol when
