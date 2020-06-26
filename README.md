@@ -15,5 +15,5 @@ L'applicazione ci permette di scaricare i dati delle rilevazioni effettuate dal 
 I codici sorgenti dell'applicazione sviluppata con il framework Flutter si trovano nella cartella <b>microbit_hiro</b>.<br><br>
 
 ### Progetto di Machine Learning
-Il progetto di [Machine Learning](https://colab.research.google.com/drive/1DWXJCYFagaRwXk9cvUQ4ucVTA527xKEV?usp=sharing) ci aiuta a determinare quali siano le condizioni ambientali favorevoli per ogni specifico individuo. 
+[Il progetto di Machine Learning](https://colab.research.google.com/drive/1DWXJCYFagaRwXk9cvUQ4ucVTA527xKEV?usp=sharing) ci aiuta a determinare quali siano le condizioni ambientali favorevoli per ogni specifico individuo. 
 Per maggiori informazioni, è possibile visionare il seguente [video](https://youtu.be/x8loR7-OCnQ).
