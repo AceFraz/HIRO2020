@@ -16,4 +16,4 @@ I codici sorgenti dell'applicazione sviluppata con il framework Flutter si trova
 
 ### Progetto di Machine Learning
 Il progetto di [Machine Learning](https://colab.research.google.com/drive/1DWXJCYFagaRwXk9cvUQ4ucVTA527xKEV?usp=sharing) ci aiuta a determinare quali siano le condizioni ambientali favorevoli per ogni specifico individuo. 
-Per maggiori informazioni, è possibile consultare il seguente [video](https://youtu.be/x8loR7-OCnQ).
+Per maggiori informazioni, è possibile visionare il seguente [video](https://youtu.be/x8loR7-OCnQ).
