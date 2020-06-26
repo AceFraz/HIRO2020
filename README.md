@@ -10,7 +10,7 @@ In <b>microbit-samples-HIRO/build/bbc-microbit-classic-gcc/source</b> si trova i
 Se si desidera compilare il progetto, si può seguire la guida al seguente [link](https://lancaster-university.github.io/microbit-docs/offline-toolchains/). <br> <br>
 
 ### Applicazione
-Tutti i codici sorgenti riguardanti l'applicazione sviluppata con il framework Flutter si trovano nella cartella <br><br>
+Tutti i codici sorgenti riguardanti l'applicazione sviluppata con il framework Flutter si trovano nella cartella <b>microbit_hiro</b>. <br><br>
 
 ### Progetto di Machine Learning
 Il nostro progetto di [Machine Learning](https://colab.research.google.com/drive/1DWXJCYFagaRwXk9cvUQ4ucVTA527xKEV?usp=sharing).
