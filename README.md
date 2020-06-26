@@ -1,7 +1,7 @@
 # Prototipo HIRO
 
 ### Funzionalità del prototipo
-Il prototipo HIRO monitora le condizioni ambientali e consiglia all'utente in che misura usare i climatizzatori, per mantenere condizioni di benessere e limitare le emissioni termiche esterne, dando anche un contributo al benessere del pianeta. <br>
+Il prototipo HIRO monitora le condizioni ambientali e consiglia all'utente in che misura usare i climatizzatori, per mantenere condizioni di benessere e limitare le emissioni termiche esterne, contribuendo anche al benessere ambientale del pianeta. <br>
 Se sei interessato a scoprire le funzionalità del prototipo HIRO, puoi visionare il seguente [video](https://youtu.be/x8loR7-OCnQ). <br> <br>
 
 ### Software del prototipo
@@ -15,5 +15,5 @@ L'applicazione ci permette di scaricare i dati delle rilevazioni effettuate dal 
 I codici sorgenti dell'applicazione sviluppata con il framework Flutter si trovano nella cartella <b>microbit_hiro</b>. <br><br>
 
 ### Progetto di Machine Learning
-Il progetto di [Machine Learning](https://colab.research.google.com/drive/1DWXJCYFagaRwXk9cvUQ4ucVTA527xKEV?usp=sharing) ci aiuta a determinare quali siano le condizioni ambientali favorevoli per ogni individuo. <br>
+Il progetto di [Machine Learning](https://colab.research.google.com/drive/1DWXJCYFagaRwXk9cvUQ4ucVTA527xKEV?usp=sharing) ci aiuta a determinare quali siano le condizioni ambientali favorevoli per ogni specifico individuo. <br>
 Per maggiori informazioni, è possibile consultare il seguente [video](https://youtu.be/x8loR7-OCnQ).
