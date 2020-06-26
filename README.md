@@ -2,7 +2,7 @@
 
 ## Software del prototipo
 Il software del nostro prototipo, insieme alla libreria DAL, è disponibile nella cartella microbit-samples-HIRO. <br>
-In <b>microbit-samples-HIRO/build/bbc-microbit-classic-gcc/source</b> si trova il file <b>microbit-samples-combined.hex</b> già compilato.
+In <b>microbit-samples-HIRO/build/bbc-microbit-classic-gcc/source</b> si trova il file <b>microbit-samples-combined.hex</b> già compilato. <br>
 Se si desidera compilare il progetto, si può seguire la guida al seguente [link](https://lancaster-university.github.io/microbit-docs/offline-toolchains/).
 
 ## Applicazione
