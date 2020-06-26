@@ -235,7 +235,10 @@ int main()
                 vaiAvanti(15);
 
                 //Adesso aspettiamo per 5 minuti una risposta da parte dell'utente
-                while(attuale.min - 5 > lastMin) {
+                while(attuale.min - 5 < lastMin) {
+                    //Aggiorniamo la data attuale
+                    attuale = orologio.getData();
+
                     //Premendo entrambi i bottoni, l'utente segnalerà uno stato di benessere
                     if(uBit.buttonAB.isPressed()) {
                         statoUtente = "bene";
@@ -255,7 +258,7 @@ int main()
                     uBit.sleep(100);
                 }
 
-                //Una volta passati i 5 minuti, resettiamo il display
+                //Una volta ricevuta una risposta o passati i 5 minuti, resettiamo il display
                 uBit.display.clear();
                 
                 //Facciamo girare il prototipo e lo mandiamo avanti, per farlo tornare alla posizione di partenza
