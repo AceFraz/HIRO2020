@@ -1,6 +1,7 @@
 # Prototipo HIRO
 
-### Funzionalità del prototipo
+### Funzionalità del robot
+Il prototipo monitora le condizioni ambientali e dà consigli all'individuo su come mantenere condizioni di benessere e su come ridurre le emissioni termiche esterne e il consumo di energia elettrica. <br>
 Se sei interessato a scoprire le funzionalità del prototipo HIRO, puoi visionare il seguente [video](https://youtu.be/x8loR7-OCnQ). <br> <br>
 
 ### Software del prototipo
@@ -9,7 +10,7 @@ I codici sorgenti, da noi sviluppati, si trovano in <b>microbit-samples-HIRO/sou
 In <b>microbit-samples-HIRO/build/bbc-microbit-classic-gcc/source</b> si trova il file <b>microbit-samples-combined.hex</b> già compilato.<br>
 Se si desidera compilare il progetto, si può seguire la guida al seguente [link](https://lancaster-university.github.io/microbit-docs/offline-toolchains/). <br> <br>
 
-### Applicazione
+### Applicazione Flutter
 L'applicazione ci permette di scaricare i dati delle rilevazioni effettuate dal prototipo. <br>
 I codici sorgenti dell'applicazione sviluppata con il framework Flutter si trovano nella cartella <b>microbit_hiro</b>. <br><br>
 
