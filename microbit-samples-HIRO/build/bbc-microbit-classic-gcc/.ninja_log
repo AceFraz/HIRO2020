@@ -178,3 +178,9 @@
 140	181	0	ym/ble/source/ble.a	b9679cc775b1c943
 15	635	0	source/CMakeFiles/microbit-samples.dir/C_/Users/peppe.ggu/Desktop/microbitprove/microbit-samples/source/main.cpp.o	efb13078be127f3f
 649	1045	0	source/microbit-samples	d5f370e6e10a4ab3
+86	1839	0	ym/nrf51-sdk/source/nrf51-sdk.a	6dbad1e98ec95a6b
+1839	2593	0	ym/ble-nrf51822/source/ble-nrf51822.a	d172f48839216a6
+2594	3103	0	ym/ble/source/ble.a	a5bb2f31b2cc3bf8
+99	7208	0	source/CMakeFiles/microbit-samples.dir/C_/Users/peppe.ggu/Desktop/microbitprove/microbit-samples/source/Orologio.cpp.o	c30ba5544f7c44f5
+94	8320	0	source/CMakeFiles/microbit-samples.dir/C_/Users/peppe.ggu/Desktop/microbitprove/microbit-samples/source/main.cpp.o	efb13078be127f3f
+8322	10647	0	source/microbit-samples	897b9a9af3353e28

@@ -6,8 +6,8 @@ include_directories("C:/Users/peppe.ggu/Desktop/microbitprove/microbit-samples/s
 
 
 set(YOTTA_AUTO_MICROBIT-SAMPLES_CPP_FILES
-    "C:/Users/peppe.ggu/Desktop/microbitprove/microbit-samples/source/Orologio.cpp"
     "C:/Users/peppe.ggu/Desktop/microbitprove/microbit-samples/source/main.cpp"
+    "C:/Users/peppe.ggu/Desktop/microbitprove/microbit-samples/source/Orologio.cpp"
 )
 # force dependency on the config header for cpp files, which CMake otherwise wouldn't track:
 set_property(SOURCE ${YOTTA_AUTO_MICROBIT-SAMPLES_CPP_FILES} PROPERTY OBJECT_DEPENDS "C:/Users/peppe.ggu/Desktop/microbitprove/microbit-samples/build/bbc-microbit-classic-gcc/yotta_config.h")
