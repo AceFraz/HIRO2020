@@ -5,7 +5,7 @@ Il prototipo HIRO monitora le condizioni ambientali e consiglia all'utente in ch
 Se sei interessato a scoprire le funzionalità del prototipo HIRO, puoi visionare il seguente [video](https://youtu.be/x8loR7-OCnQ).<br><br>
 
 ### Software del prototipo
-Il software del prototipo, insieme alla libreria [DAL](https://lancaster-university.github.io/microbit-docs/), è disponibile nella cartella microbit-samples-HIRO.<br>
+Il software del prototipo, insieme alla libreria [DAL](https://lancaster-university.github.io/microbit-docs/), è disponibile nella cartella <b>microbit-samples-HIRO</b>.<br>
 I codici sorgenti, da noi sviluppati, si trovano in <b>microbit-samples-HIRO/source</b>.<br>
 In <b>microbit-samples-HIRO/build/bbc-microbit-classic-gcc/source</b> si trova il file <b>microbit-samples-combined.hex</b> già compilato.
 Se si desidera compilare il progetto, si può seguire la guida al seguente [link](https://lancaster-university.github.io/microbit-docs/offline-toolchains/).<br><br>
