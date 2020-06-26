@@ -1,7 +1,7 @@
 # Prototipo HIRO
 
 ### Funzionalità del prototipo
-Il prototipo HIRO monitora le condizioni ambientali e consiglia all'utente in che misura usare i climatizzatori, per mantenere una temperatura di benessere nell'abitazione e limitare le emissioni termiche esterne, contribuendo in piccola parte al benessere ambientale del pianeta.<p>
+Il prototipo HIRO monitora le condizioni ambientali e consiglia all'utente in che misura usare i climatizzatori, per mantenere una temperatura di benessere nell'abitazione e limitare le emissioni termiche esterne, contribuendo in piccola parte al benessere ambientale del pianeta.<br>
 Se sei interessato a scoprire le funzionalità del prototipo HIRO, puoi visionare il seguente [video](https://youtu.be/x8loR7-OCnQ).<br><br>
 
 ### Software del prototipo
