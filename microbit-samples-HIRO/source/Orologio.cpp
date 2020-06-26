@@ -1,10 +1,20 @@
 #include "Orologio.h"
 
+/*
+    GIORNI_MESE[] contiene il numero di giorni per ogni mese dell'anno, 
+    in modo da aggiornare correttamente la data, nel caso in cui
+    si decida di lasciare il prototipo operativo per lunghi lassi di tempo
+*/
 const int GIORNI_MESE[] = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
 
+//La prima istanza della classe Orologio non è inizializzata e non contiene alcuna data
 data Orologio::Data = {};
 bool Orologio::Inizializzato = false;
 
+/*
+    Il metodo statico startClock() si occupa di aggiorare perpetuamente
+    l'orologio al passare del tempo (con precisione del secondo)
+*/
 void Orologio::startClock()
 {
     while(true) {
@@ -41,6 +51,7 @@ void Orologio::startClock()
 
 Orologio::Orologio() {}
 
+//Inizializza l'orologio inserendo una data iniziale
 void Orologio::init(data dataIniziale)
 {
     if(!Orologio::Inizializzato) {
@@ -57,16 +68,20 @@ void Orologio::init(data dataIniziale)
     }
 }
 
+
+//Controlla se l'orologio è inizializzato
 bool Orologio::isInit()
 {
     return Inizializzato;
 }
 
+//Ricevi la data dell'orologio, sotto forma di struct 'data'
 data Orologio::getData()
 {   
     return Orologio::Data;
 }
 
+//Reimposta la data dell'orologio
 void Orologio::setData(data nuovaData)
 {
     Orologio::Data.gg = nuovaData.gg;
