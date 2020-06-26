@@ -1,6 +1,6 @@
 # Prototipo HIRO
 
-# Software del prototipo <p>
+# Software del prototipo
 Il software del nostro prototipo è disponibile nella cartella micro
 
 # Applicazione
