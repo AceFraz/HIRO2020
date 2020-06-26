@@ -1,6 +1,7 @@
 # Prototipo HIRO
 
 ### Funzionalità del prototipo
+Se sei interessato a scoprire le funzionalità del nostro prototipo, puoi visionare il seguente [video](https://youtu.be/x8loR7-OCnQ).
 
 ### Software del prototipo
 Il software del nostro prototipo, insieme alla libreria DAL, è disponibile nella cartella microbit-samples-HIRO.<br>
